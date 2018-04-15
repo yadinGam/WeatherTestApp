@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController , UICollectionViewDataSource, UICollectionViewDelegate{
+class ViewController: UIViewController , UICollectionViewDataSource, UICollectionViewDelegate {
     
    
     
@@ -18,6 +18,7 @@ class ViewController: UIViewController , UICollectionViewDataSource, UICollectio
     
     private var cityIds:[Int] = [Int]()
     
+    @IBOutlet weak var pageControl: UIPageControl!
     
     
     override func viewDidLoad() {
@@ -51,7 +52,7 @@ class ViewController: UIViewController , UICollectionViewDataSource, UICollectio
         cityIds.append(city8)
         cityIds.append(city9)
         
-
+configurePageControl()
         
     }
     
@@ -73,16 +74,19 @@ class ViewController: UIViewController , UICollectionViewDataSource, UICollectio
         
         if let cityCell = cell as? CityWeatherCollectionViewCell
         {
-           //  print("\(cityIds[indexPath.row])")
+            pageControl.currentPage = indexPath.item
             cityCell.cityId = cityIds[indexPath.item]
-           //  print("\(cityCell.cityId!)")
         }
         return cell
         
         
     }
 
-    
+    func configurePageControl() {
+        self.pageControl.numberOfPages = cityIds.count
+        self.pageControl.currentPage = 0
+        self.pageControl.currentPageIndicatorTintColor = UIColor.green
+    }
 
 }
 

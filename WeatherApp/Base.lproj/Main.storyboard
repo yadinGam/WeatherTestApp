@@ -83,15 +83,15 @@
                                         <connections>
                                             <outlet property="nameLabel" destination="6Ty-X9-9b2" id="Prd-93-jeh"/>
                                             <outlet property="tempertureLabel" destination="84c-KQ-Tqb" id="ESq-7b-7QB"/>
-                                            <outlet property="weatherDescriptionLabel" destination="wye-Rv-EZx" id="vNU-xD-Uod"/>
-                                            <outlet property="weatherImageView" destination="okI-7E-bbp" id="fkI-QC-Jlo"/>
+                                            <outlet property="weatherDescriptionLabel" destination="wye-Rv-EZx" id="jfL-jK-phj"/>
+                                            <outlet property="weatherImageView" destination="okI-7E-bbp" id="nNp-1c-eQz"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="KG6-0L-OsE">
-                                <rect key="frame" x="0.0" y="630" width="375" height="37"/>
-                                <color key="backgroundColor" red="0.2201879229114303" green="0.21136717714152375" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="609" width="375" height="58"/>
+                                <color key="backgroundColor" red="0.91853792989131522" green="0.3477612349074285" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -99,6 +99,7 @@
                             <constraint firstItem="KG6-0L-OsE" firstAttribute="centerX" secondItem="0pJ-D0-fH9" secondAttribute="centerX" id="3O9-kX-m71"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0pJ-D0-fH9" secondAttribute="trailing" id="7wE-Dd-3xW"/>
                             <constraint firstItem="0pJ-D0-fH9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CjJ-jP-cmO"/>
+                            <constraint firstItem="KG6-0L-OsE" firstAttribute="top" secondItem="0pJ-D0-fH9" secondAttribute="bottom" constant="8" symbolic="YES" id="obc-C1-ZJI"/>
                             <constraint firstItem="0pJ-D0-fH9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rhO-SD-9Z4"/>
                             <constraint firstItem="KG6-0L-OsE" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="vfC-f1-8Qz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0pJ-D0-fH9" secondAttribute="bottom" constant="66" id="wCo-nI-deu"/>
@@ -107,6 +108,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="pageControl" destination="KG6-0L-OsE" id="GLp-mZ-QnE"/>
                         <outlet property="weatherCollectionView" destination="0pJ-D0-fH9" id="RWL-Xp-QRb"/>
                     </connections>
                 </viewController>

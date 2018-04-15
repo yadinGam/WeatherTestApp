@@ -44,7 +44,9 @@ class CityWeatherCollectionViewCell: UICollectionViewCell {
     
     func updateUI(){
       nameLabel.text = cityJSONData?.name
-        tempertureLabel.text = String("\(cityJSONData!.main.temp)")
+        let celsiusTemp = cityJSONData!.main.temp - 273.15
+        let y = Double(round(1000*celsiusTemp)/1000)
+        tempertureLabel.text = String("\(y) celsius")
         weatherDescriptionLabel.text = cityJSONData?.weather[0].description
         
      fetchImage()
