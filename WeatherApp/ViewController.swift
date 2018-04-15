@@ -51,7 +51,7 @@ class ViewController: UIViewController , UICollectionViewDataSource, UICollectio
         cityIds.append(city8)
         cityIds.append(city9)
         
-//       currentId = city0
+
         
     }
     
@@ -67,23 +67,22 @@ class ViewController: UIViewController , UICollectionViewDataSource, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
       
-     
-        
         let cell = weatherCollectionView.dequeueReusableCell(withReuseIdentifier: "cityCell" , for: indexPath)
+        
+        print("\(indexPath)")
         
         if let cityCell = cell as? CityWeatherCollectionViewCell
         {
-            
-            //update th//  currentId = cityIds[indexPath.row]
-            //make the server call
-            
-            cityCell.cityId = cityIds[indexPath.row]
+           //  print("\(cityIds[indexPath.row])")
+            cityCell.cityId = cityIds[indexPath.item]
+           //  print("\(cityCell.cityId!)")
         }
         return cell
         
         
     }
 
+    
 
 }
 

@@ -84,7 +84,7 @@ struct CityJSONData: Codable{
           let id:Int
             let main:String
             let description:String
-            let icon: String
+            let icon: String?
         
         init(from decoder: Decoder) throws {
             let container = try decoder.container(keyedBy: WeatherCodingKeys.self)

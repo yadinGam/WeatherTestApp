@@ -20,9 +20,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0pJ-D0-fH9">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0pJ-D0-fH9">
                                 <rect key="frame" x="0.0" y="20" width="375" height="581"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.35766927122909864" green="1" blue="0.40208128388107256" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="pOb-wM-6Hj">
                                     <size key="itemSize" width="375" height="583"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -70,6 +70,7 @@
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" red="1" green="0.33730631525084465" blue="0.34121849483074895" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="6Ty-X9-9b2" firstAttribute="leading" secondItem="Ouy-nH-JvE" secondAttribute="leadingMargin" id="09k-zG-EAd"/>
                                             <constraint firstAttribute="trailing" secondItem="GSd-JE-H9H" secondAttribute="trailing" constant="82" id="HDL-hd-oEt"/>
@@ -82,14 +83,15 @@
                                         <connections>
                                             <outlet property="nameLabel" destination="6Ty-X9-9b2" id="Prd-93-jeh"/>
                                             <outlet property="tempertureLabel" destination="84c-KQ-Tqb" id="ESq-7b-7QB"/>
-                                            <outlet property="wetherDescriptionLabel" destination="wye-Rv-EZx" id="5RY-Md-HDN"/>
-                                            <outlet property="wetherImageView" destination="okI-7E-bbp" id="FcW-vH-V8s"/>
+                                            <outlet property="weatherDescriptionLabel" destination="wye-Rv-EZx" id="vNU-xD-Uod"/>
+                                            <outlet property="weatherImageView" destination="okI-7E-bbp" id="fkI-QC-Jlo"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="KG6-0L-OsE">
                                 <rect key="frame" x="0.0" y="630" width="375" height="37"/>
+                                <color key="backgroundColor" red="0.2201879229114303" green="0.21136717714152375" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -13,8 +13,8 @@ class CityWeatherCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var tempertureLabel: UILabel!
-    @IBOutlet weak var wetherDescriptionLabel: UILabel!
-    @IBOutlet weak var wetherImageView: UIImageView!
+    @IBOutlet weak var weatherDescriptionLabel: UILabel!
+    @IBOutlet weak var weatherImageView: UIImageView!
     
     var cityId: Int?{
         didSet{
@@ -45,9 +45,9 @@ class CityWeatherCollectionViewCell: UICollectionViewCell {
     func updateUI(){
       nameLabel.text = cityJSONData?.name
         tempertureLabel.text = String("\(cityJSONData!.main.temp)")
-        wetherDescriptionLabel.text = cityJSONData?.weather[0].description
+        weatherDescriptionLabel.text = cityJSONData?.weather[0].description
         
-     //fetchImage()
+     fetchImage()
     }
     
     private func parseJSON(with jsonUrlString: String){
@@ -76,16 +76,17 @@ class CityWeatherCollectionViewCell: UICollectionViewCell {
     
     
     private func fetchImage() {
-//        if let url = campaign?.videoThumbnail {
-//            Alamofire.request(url).response {[weak self] response in
-//                if let data = response.data {
-//                    let image = UIImage(data: data)
-//                    self?.campaignImage.image = image
-//                } else {
-//                    print("Data is nil.")
-//                }
-//            }
-//        }
+        if let iconUrl = cityJSONData?.weather[0].icon {
+            let url = "http://openweathermap.org/img/w/\(iconUrl).png"
+            Alamofire.request(url).response {[weak self] response in
+                if let data = response.data {
+                    let image = UIImage(data: data)
+                    self?.weatherImageView.image = image
+                } else {
+                    print("Data is nil.")
+                }
+            }
+        }
     
 }
 
