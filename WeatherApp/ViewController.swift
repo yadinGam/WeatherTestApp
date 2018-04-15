@@ -16,7 +16,7 @@ class ViewController: UIViewController , UICollectionViewDataSource, UICollectio
     
     @IBOutlet weak var weatherCollectionView: UICollectionView!
     
-     private var cities:[City] = [City]()
+     private var cityIds:[Int] = [Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,28 +25,28 @@ class ViewController: UIViewController , UICollectionViewDataSource, UICollectio
         weatherCollectionView.dataSource = self
         
         
-        let city0: City = City(lat: 3.44444,lon: 4.555555)
-        let city1: City = City(lat: 3.44444,lon: 4.555555)
-        let city2: City = City(lat: 3.44444,lon: 4.555555)
-        let city3: City = City(lat: 3.44444,lon: 4.555555)
-        let city4: City = City(lat: 3.44444,lon: 4.555555)
-         let city5: City =  City(lat: 3.44444,lon: 4.555555)
-         let city6: City =  City(lat: 3.44444,lon: 4.555555)
-        let city7: City =  City(lat: 3.44444,lon: 4.555555)
-        let city8: City =  City(lat: 3.44444,lon: 4.555555)
-        let city9: City = City(lat: 3.44444,lon: 4.555555)
+        let city0 = 819827
+        let city1 = 524901
+        let city2 = 1271881
+        let city3 = 1283240
+        let city4 = 1282898
+        let city5 = 703448
+        let city6 = 3632308
+        let city7 = 1273294
+        let city8 = 502069
+        let city9 = 3645532    
         
        
-        cities.append(city0)
-        cities.append(city1)
-        cities.append(city2)
-        cities.append(city3)
-        cities.append(city4)
-        cities.append(city5)
-        cities.append(city6)
-        cities.append(city7)
-        cities.append(city8)
-        cities.append(city9)
+        cityIds.append(city0)
+        cityIds.append(city1)
+        cityIds.append(city2)
+        cityIds.append(city3)
+        cityIds.append(city4)
+        cityIds.append(city5)
+        cityIds.append(city6)
+        cityIds.append(city7)
+        cityIds.append(city8)
+        cityIds.append(city9)
         
         
     }
@@ -57,7 +57,7 @@ class ViewController: UIViewController , UICollectionViewDataSource, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cities.count
+        return cityIds.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -68,6 +68,7 @@ class ViewController: UIViewController , UICollectionViewDataSource, UICollectio
         cell.nameLabel.text = String("\(indexPath.row)")
         cell.backgroundColor = UIColor.cyan // make cell more visible in our example project
         
+        //here i need to call the api
         
         return cell
     }

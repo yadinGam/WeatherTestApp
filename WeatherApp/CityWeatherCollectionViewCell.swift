@@ -16,4 +16,32 @@ class CityWeatherCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var wetherImageView: UIImageView!
     
     
+    var city: City?{
+        didSet{
+            print("campaign had been set to cell")
+            updateUI()
+        }
+    }
+    
+    
+    func updateUI(){
+      
+        fetchImage()
+    }
+    
+    
+    private func fetchImage() {
+//        if let url = campaign?.videoThumbnail {
+//            Alamofire.request(url).response {[weak self] response in
+//                if let data = response.data {
+//                    let image = UIImage(data: data)
+//                    self?.campaignImage.image = image
+//                } else {
+//                    print("Data is nil.")
+//                }
+//            }
+//        }
+    
+}
+
 }
