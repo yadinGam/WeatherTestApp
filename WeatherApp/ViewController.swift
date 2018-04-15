@@ -16,11 +16,14 @@ class ViewController: UIViewController , UICollectionViewDataSource, UICollectio
     
     @IBOutlet weak var weatherCollectionView: UICollectionView!
     
-     private var cityIds:[Int] = [Int]()
+    private var cityIds:[Int] = [Int]()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
         weatherCollectionView.delegate = self
         weatherCollectionView.dataSource = self
         
@@ -48,8 +51,10 @@ class ViewController: UIViewController , UICollectionViewDataSource, UICollectio
         cityIds.append(city8)
         cityIds.append(city9)
         
+//       currentId = city0
         
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -61,16 +66,22 @@ class ViewController: UIViewController , UICollectionViewDataSource, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        // get a reference to our storyboard cell
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cityCell", for: indexPath as IndexPath) as! CityWeatherCollectionViewCell
+      
+     
         
-        // Use the outlet in our custom class to get a reference to the UILabel in the cell
-        cell.nameLabel.text = String("\(indexPath.row)")
-        cell.backgroundColor = UIColor.cyan // make cell more visible in our example project
+        let cell = weatherCollectionView.dequeueReusableCell(withReuseIdentifier: "cityCell" , for: indexPath)
         
-        //here i need to call the api
-        
+        if let cityCell = cell as? CityWeatherCollectionViewCell
+        {
+            
+            //update th//  currentId = cityIds[indexPath.row]
+            //make the server call
+            
+            cityCell.cityId = cityIds[indexPath.row]
+        }
         return cell
+        
+        
     }
 
 
