@@ -12,6 +12,7 @@
 		330D9B0C20833476001376C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330D9B0A20833476001376C7 /* Main.storyboard */; };
 		330D9B0E20833477001376C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 330D9B0D20833477001376C7 /* Assets.xcassets */; };
 		330D9B1120833478001376C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330D9B0F20833478001376C7 /* LaunchScreen.storyboard */; };
+		330E9B852083513400FA828B /* CityWeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330E9B842083513400FA828B /* CityWeatherCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		330D9B0D20833477001376C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		330D9B1020833478001376C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		330D9B1220833478001376C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		330E9B842083513400FA828B /* CityWeatherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityWeatherCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				330D9B0D20833477001376C7 /* Assets.xcassets */,
 				330D9B0F20833478001376C7 /* LaunchScreen.storyboard */,
 				330D9B1220833478001376C7 /* Info.plist */,
+				330E9B842083513400FA828B /* CityWeatherCollectionViewCell.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			files = (
 				330D9B0920833476001376C7 /* ViewController.swift in Sources */,
 				330D9B0720833476001376C7 /* AppDelegate.swift in Sources */,
+				330E9B852083513400FA828B /* CityWeatherCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
